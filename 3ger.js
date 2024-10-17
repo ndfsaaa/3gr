@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>@font-face{
     font-family:'SBGlyphs';
-    src:url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+    src:url('https://github.com/ndfsaaa/3gr/raw/refs/heads/main/AfacadFlux-VariableFont_slnt,wght.ttf');
     font-weight:normal;
     font-style:normal
 }
