@@ -678,16 +678,16 @@ a:visited{
 }
 @keyframes pulse {
     0% {
-        filter: drop-shadow(rgba(255, 18, 149, 0.5) 0px 0px 30px);
+        filter: drop-shadow(rgba(255, 0, 153, 0.5) 0px 0px 30px);
     }
     33% {
-        filter: drop-shadow(rgba(8, 239, 231, 0.5) 0px 0px 30px);
+        filter: drop-shadow(rgba(0, 255, 247, 0.5) 0px 0px 30px);
     }
     66% {
-        filter: drop-shadow(rgba(8, 239, 62, 0.5) 0px 0px 30px);
+        filter: drop-shadow(rgba(200, 255, 0, 0.5) 0px 0px 30px);
     }
     100% {
-        filter: drop-shadow(rgba(239, 8, 8, 0.5) 0px 0px 30px);
+        filter: drop-shadow(rgba(0, 255, 170, 0.5) 0px 0px 30px);
     }
 }
 #colors{
