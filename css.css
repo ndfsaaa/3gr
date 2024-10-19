@@ -674,20 +674,26 @@ a:visited{
 }
 
 #logo img:hover{
-    animation: pulse 5s linear 0s infinite alternate forwards;
+    animation: pulse 2.5s ease-out 0s infinite alternate forwards;
 }
 @keyframes pulse {
     0% {
-        filter: drop-shadow(rgba(255, 0, 153, 0.5) 0px 0px 30px);
+        filter: drop-shadow(rgba(255,255,255,0.35) 0px 0px 15px);
     }
-    33% {
-        filter: drop-shadow(rgba(0, 255, 247, 0.5) 0px 0px 30px);
+    40% {
+        filter: drop-shadow(rgba(0, 255, 234, 0.5) 0px 0px 30px);
     }
-    66% {
-        filter: drop-shadow(rgba(200, 255, 0, 0.5) 0px 0px 30px);
+    47% {
+        filter: drop-shadow(rgba(255, 0, 251, 0.5) 0px 0px 30px);
+    }
+    54% {
+        filter: drop-shadow(rgba(255, 255, 0, 0.5) 0px 0px 30px);
+    }
+    60% {
+        filter: drop-shadow(rgba(13, 255, 0, 0.5) 0px 0px 30px);
     }
     100% {
-        filter: drop-shadow(rgba(0, 255, 170, 0.5) 0px 0px 30px);
+        filter: drop-shadow(rgba(255,255,255,0.35) 0px 0px 15px);
     }
 }
 #colors{
@@ -1148,7 +1154,6 @@ table{
 }
 .textprogress{
     margin-top:20px;
-    text-shadow:0 0 10px hsla(200,100%,80%,1);
     color:hsla(200,100%,90%,.9)
 }
 .cookieconsent{
