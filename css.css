@@ -474,9 +474,9 @@ a:visited{
     margin:auto
 }
 .followtools{
-    font-family:Play,Verdana;
+    font-family:"Afacad Flux",Play,Verdana;
     display:none;
-    font-size:.4em;
+    font-size:.5em;
     position:absolute;
     bottom:0;
     right:0;
@@ -491,7 +491,6 @@ a:visited{
     color:var(--def-bg-fullcolor);
     border-radius:0;
     border: 0;
-    border-bottom: var(--def-border);
     padding:7px;
     margin:4px;
     position:relative
@@ -501,8 +500,7 @@ a:visited{
     width:217px;
     margin:4px 4px 10px 4px;
     padding:4px 10px;
-    line-height:13px;
-    font-size:1.1em
+    font-size:.9em
 }
 .followtools a.big i{
     text-shadow: rgba(255,255,255,0.35) 0px 0px 15px;
@@ -667,33 +665,36 @@ a:visited{
 }
 #logo img{
     max-width:100%;
-    filter: drop-shadow(rgba(255,255,255,0.35) 0px 0px 15px);
+    filter: drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px) drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px);
     opacity: .95;
     transition-duration: 200ms;
     user-select: none;
 }
 
 #logo img:hover{
-    animation: pulse 2.5s ease-out 0s infinite alternate forwards;
+    animation: pulse 2.5s linear 0s infinite alternate forwards;
 }
 @keyframes pulse {
     0% {
-        filter: drop-shadow(rgba(255,255,255,0.35) 0px 0px 15px);
+        filter: drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px) drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px);
     }
-    40% {
-        filter: drop-shadow(rgba(0, 255, 234, 0.5) 0px 0px 30px);
+    16% {
+        filter: drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px) drop-shadow(rgba(0, 255, 234, 0.25) 0px 0px 30px);
     }
-    47% {
-        filter: drop-shadow(rgba(255, 0, 251, 0.5) 0px 0px 30px);
+    32% {
+        filter: drop-shadow(rgba(255, 0, 251, 0.25) 0px 0px 30px) drop-shadow(rgba(0, 255, 234, 0.5) 0px 0px 15px);
     }
-    54% {
-        filter: drop-shadow(rgba(255, 255, 0, 0.5) 0px 0px 30px);
+    48% {
+        filter: drop-shadow(rgba(255, 0, 251, 0.25) 0px 0px 15px) drop-shadow(rgba(255, 255, 0, 0.25) 0px 0px 30px);
     }
-    60% {
-        filter: drop-shadow(rgba(13, 255, 0, 0.5) 0px 0px 30px);
+    64% {
+        filter: drop-shadow(rgba(13, 255, 0, 0.25) 0px 0px 30px) drop-shadow(rgba(255, 255, 0, 0.25) 0px 0px 15px);
+    }
+    80% {
+        filter: drop-shadow(rgba(13, 255, 0, 0.25) 0px 0px 15px) drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px);
     }
     100% {
-        filter: drop-shadow(rgba(255,255,255,0.35) 0px 0px 15px);
+        filter: drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px) drop-shadow(rgba(255,255,255,0.17) 0px 0px 15px);
     }
 }
 #colors{
@@ -798,12 +799,16 @@ a:visited{
     width:350px;
     outline:0;
     transition:all .5s ease;
-    background:linear-gradient(to top,hsla(200,70%,70%,.5) 0,hsla(200,50%,0%,1) 20%,hsla(200,50%,0%,1) 60%,hsla(200,20%,40%,.5) 100%);
-    box-shadow:0 0 6px hsla(200,80%,80%,1);
     color:hsla(200,90%,90%,.8);
     text-shadow:0 0 7px hsla(200,80%,80%,1);
     border-radius:4px;
-    font-size:1.2em
+    font-size:1.2em;
+    backdrop-filter: var(--def-backdrop);
+    background: var(--def-bg);
+}
+
+.ecpinput {
+    background: var(--def-bg);
 }
  .ecpbtn{
     vertical-align:middle;
@@ -840,11 +845,11 @@ a:visited{
     cursor:pointer;
     margin:20px 0 20px 0;
     text-align:center;
-    background:radial-gradient(ellipse at center,hsla(200,50%,0%,1) 0,hsla(200,100%,70%,.5) 150%);
-    box-shadow:0 0 6px hsla(200,100%,80%,1);
-    text-shadow:0 0 7px hsla(200,100%,80%,1);
-    color:hsla(200,100%,90%,.8);
-    font-family:Play,Verdana;
+    background:var(--def-bg);
+    backdrop-filter: var(--def-backdrop);
+    color:var(--def-bg-fullcolor);
+    font-family:var(--def-font) !important;
+    border-bottom: var(--def-border);
     border:0
 }
  .playbtn{
@@ -933,12 +938,12 @@ a:visited{
 }
 .stats{
     font-size:.5em;
-    border:2px solid hsl(200,50%,70%);
-    box-shadow:0 0 15px hsl(200,50%,70%);
-    background:hsla(200,50%,10%,.5);
+    font-family: var(--def-font);
     width:600px;
     padding:0 10px;
-    margin:10px auto
+    margin:10px auto;
+    backdrop-filter: var(--def-backdrop) brightness(.8);
+    background: var(--def-bg);
 }
  .stats i{
     margin:10px;
@@ -957,14 +962,15 @@ a:visited{
 #respawn_actions button{
     padding:10px 0;
     font-size:.8em;
-    width:175px
+    width:175px;
+    border-bottom: var(--def-border);
 }
 .statinfo{
     font-size:1.5em;
     height:40px;
     line-height:40px;
     padding:0 20px;
-    border-bottom:1px solid hsl(200,50%,55%);
+    border-bottom:1px solid hsla(0, 0%, 100%, 0.102);
     transition:all .5s ease
 }
 .statinfo:last-child{
@@ -1006,9 +1012,6 @@ a:visited{
     width:90%;
     margin:0 auto;
     height:25px;
-    background:linear-gradient(to bottom,#000 0,#444 49%,#222 50%,#000 100%);
-    border:2px solid hsla(200,100%,70%,.8);
-    box-shadow:0 0 10px hsla(200,100%,80%,1);
     border-radius:4px
 }
  .sbg-facebook,.sbg-twitter{
@@ -1027,7 +1030,17 @@ a:visited{
     width:90%;
     margin:0 auto;
     border-radius:2vw;
-    color:#666
+    color:#666;
+}
+@keyframes appear {
+    from {
+        transform: scale(.8);
+        opacity:0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .desktop,.mobile{
     display:none
@@ -1150,11 +1163,13 @@ table{
     height:25px;
     width:0;
     background:hsl(200,90%,70%);
-    background:linear-gradient(to right,hsla(200,30%,30%,.7) 0,hsla(200,90%,80%,.8) 100%)
+    background:linear-gradient(to right,hsla(200,0%,30%,.7) 0,hsla(200,0%,80%,.8) 100%)
 }
 .textprogress{
     margin-top:20px;
-    color:hsla(200,100%,90%,.9)
+    color:var(--def-bg-fullcolor);
+    text-shadow: none !important;
+    font-family: var(--def-font) !important;
 }
 .cookieconsent{
     opacity:0;
@@ -1330,16 +1345,16 @@ a.full-changelog:hover{
     right:0;
     top:-750px;
     margin:0 auto;
-    box-shadow:0 0 6px hsla(200,100%,80%,1);
     width:800px;
     max-width:100%;
     max-height:100%;
-    background:linear-gradient(135deg,hsla(200,30%,10%,1) 0,hsla(200,30%,30%,1) 150%);
+    background:var(--def-bg);
     transition:top .6s ease;
     display:none;
     overflow:auto;
-    color:hsla(200,80%,100%,.8);
-    text-shadow:0 0 6px hsla(200,100%,60%,.75)
+    color:var(--def-bg-fullcolor);
+    backdrop-filter: blur(16px) brightness(.8);
+    font-family: "Afacad Flux", "Play", sans-serif !important;
 }
 .modal::-webkit-scrollbar-track{
     box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
@@ -1352,14 +1367,13 @@ a.full-changelog:hover{
 .modal::-webkit-scrollbar-thumb{
     border-radius:0;
     box-shadow:inset 0 0 6px rgba(0,0,0,.5);
-    background-color:hsla(200,50%,70%,.5)
+    background-color:hsla(200,0%,70%,.5)
 }
 .modal .header{
     margin:5px 0;
     padding:5px 40px;
-    font-size:2em;
-    background:hsla(200,70%,70%,.1);
-    border-bottom:5px solid hsla(200,50%,70%,.5)
+    font-size:2.1em;
+    font-family: "Afacad Flux", "Play", sans-serif !important;
 }
 .modal .modaltitle{
     display:inline-block
@@ -1381,10 +1395,10 @@ a.full-changelog:hover{
 }
  .modal .modalbody .regions{
     text-align:center;
-    border-bottom:1px solid hsla(200,50%,70%,.5);
+    border-bottom:1px solid hsla(200,0%,70%,.5);
     margin:0 -40px 40px -40px;
     padding:10px 0;
-    background:rgba(120,180,255,.08)
+    background:rgba(140,140,140,.08)
 }
 .modal .modalbody .regions .date{
     text-align:right;
@@ -1399,7 +1413,7 @@ a.full-changelog:hover{
     transition:.2s ease all
 }
 .modal .modalbody span.region:hover{
-    background:rgba(120,180,255,.05)
+    background:rgba(140,140,140,.05)
 }
 .modal .modalbody span.region.active{
     color:#FFF;
@@ -1441,6 +1455,7 @@ a.full-changelog:hover{
 .modal .modecp div{
     padding:5px 10px
 }
+.modecp {position: sticky !important;}
 .modal .mod:hover{
     cursor:pointer
 }
@@ -1592,8 +1607,6 @@ a.full-changelog:hover{
     font-size:.7em;
     padding:0 100px 0 10px;
     position:relative;
-    background:hsl(200,60%,15%);
-    border:1px solid hsl(200,60%,10%);
     height:30px;
     line-height:30px
 }
@@ -1819,7 +1832,7 @@ canvas{
     left:0;
     right:0;
     bottom:0;
-    background-color:#ccc;
+    background-color:#cccccc20;
     -webkit-transition:.4s;
     transition:.4s
 }
@@ -1835,7 +1848,7 @@ canvas{
     transition:.4s
 }
  input:checked+.slider{
-    background-color:hsl(200,50%,10%)
+    background-color:rgba(255, 255, 255, 0.407);
 }
 input:focus+.slider{
     box-shadow:0 0 1px hsl(200,60%,30%)
@@ -1873,7 +1886,7 @@ input[type=range]::-webkit-slider-runnable-track{
     height:9.3px;
     cursor:pointer;
     box-shadow:1px 1px 1px #000,0 0 1px #0d0d0d;
-    background:hsl(200,50%,45%);
+    background:hsl(0, 0%, 30%);
     border-radius:1.3px;
     border:.2px solid #160101
 }
