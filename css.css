@@ -474,7 +474,7 @@ a:visited{
     margin:auto
 }
 .followtools{
-    font-family:"Afacad Flux",Play,Verdana;
+    font-family:var(--def-font);
     display:none;
     font-size:.5em;
     position:absolute;
@@ -706,8 +706,8 @@ a:visited{
     --def-bg: rgba(255,255,255,.03);
     --def-bg-fullcolor: rgb(255,255,255,.75);
     --def-bg-hov: rgba(255,255,255,.04);
-    --def-font: "Afacad Flux", "Play", sans-serif;
-    --alt-font: "VT323", "Play", serif;
+    --def-font: "VT323", "Play", sans-serif;
+    --alt-font: "Afacad Flux", "Play", serif;
     --def-backdrop: blur(9px);
     --def-td: 150ms;
 }
@@ -784,7 +784,7 @@ a:visited{
     color:#EEE;
     outline:0;
     background:transparent;
-    font-family: "Afacad Flux", sans-serif !important;
+    font-family: var(--def-font) !important;
     transition:all .5s ease;
     text-shadow:0 0 7px hsla(200,80%,80%,1);
     color:hsla(200,90%,90%,.8)
@@ -1354,7 +1354,7 @@ a.full-changelog:hover{
     overflow:auto;
     color:var(--def-bg-fullcolor);
     backdrop-filter: blur(16px) brightness(.8);
-    font-family: "Afacad Flux", "Play", sans-serif !important;
+    font-family: var(--def-font) !important;
 }
 .modal::-webkit-scrollbar-track{
     box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
@@ -1373,7 +1373,7 @@ a.full-changelog:hover{
     margin:5px 0;
     padding:5px 40px;
     font-size:2.1em;
-    font-family: "Afacad Flux", "Play", sans-serif !important;
+    font-family: var(--def-font) !important;
 }
 .modal .modaltitle{
     display:inline-block
@@ -2162,3 +2162,125 @@ input[type=range]:focus::-ms-fill-lower{
 .atcb_bgoverlay.atcb_click:hover{
     cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath fill-rule='evenodd' d='M11.991.69a2.35 2.35 0 0 1 3.318-.009c.918.911.922 2.392.009 3.307l-4.009 4.014 4.013 4.018c.906.909.893 2.38-.027 3.287a2.35 2.35 0 0 1-3.307-.004l-3.985-3.99-3.993 3.997a2.35 2.35 0 0 1-3.318.009c-.918-.911-.922-2.392-.009-3.307l4.009-4.014L.678 3.98C-.228 3.072-.215 1.6.706.693a2.35 2.35 0 0 1 3.307.004l3.985 3.99z'/%3E%3C/svg%3E") 32 32,pointer
 }
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider1 {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 8px; /* Specified height */
+    background: #ffffff2b; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider1:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider1::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 13px; /* Set a specific slider handle width */
+    height: 13px; /* Slider handle height */
+    background: #ffffffa5; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 9999px;
+  }
+  
+  .slider1::-moz-range-thumb {
+    width: 13px; /* Set a specific slider handle width */
+    height: 13px; /* Slider handle height */
+    background: #ffffffa5; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 9999px;
+  }
+
+  .checkbox-wrapper-1 *,
+  .checkbox-wrapper-1 ::after,
+  .checkbox-wrapper-1 ::before {
+    box-sizing: border-box;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted {
+    margin: 0;
+    width: 0;
+    height: 0;
+    display: inline;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted + label:before {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    height: 1.15em;
+    width: 1.15em;
+    margin-right: 0.6em;
+    color: rgba(0, 0, 0, 0.275);
+    border: solid 0.06em;
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset, 0 0 0 0.07em transparent inset;
+    border-radius: 0.2em;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>') no-repeat center, white;
+    background-size: 0;
+    will-change: color, border, background, background-size, box-shadow;
+    transform: translate3d(0, 0, 0);
+    transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted:enabled + label:active:before {
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset;
+    background-color: #f0f0f0;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:checked + label:before {
+    background-color: #3b98fcb0;
+    background-size: 0.75em;
+    color: rgba(0, 0, 0, 0.075);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:checked:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted:checked:enabled + label:active:before {
+    background-color: #0a7efb91;
+    color: rgba(0, 0, 0, 0.275);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:focus + label:before {
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:focus:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted:focus + label:active:before {
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:disabled + label:before {
+    opacity: 0.5;
+  }
+
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark + label:before {
+    color: rgba(255, 255, 255, 0.275);
+    background-color: #222;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="rgba(34, 34, 34, 0.999)" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>');
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:enabled + label:active:before {
+    background-color: #444;
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(255, 255, 255, 0.1) inset;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked + label:before {
+    background-color: #a97035;
+    color: rgba(255, 255, 255, 0.075);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked:enabled + label:active:before {
+    background-color: #c68035;
+    color: rgba(0, 0, 0, 0.275);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted + label {
+    -webkit-user-select: none;
+    user-select: none;
+  }
